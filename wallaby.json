@@ -1,0 +1,9 @@
+{
+  "files": [
+    "src/main/webapp/*.ts"
+  ],
+
+  "tests": [
+    "src/test/webapp/*.ts"
+  ]
+}

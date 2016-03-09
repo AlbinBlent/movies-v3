@@ -1,0 +1,1 @@
+insert into Movie (id, name) values (0, 'Film från import.sql')

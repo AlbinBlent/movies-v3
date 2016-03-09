@@ -1,0 +1,11 @@
+com/albin/model/Movie_.class
+com/albin/data/JsonStorage.class
+com/albin/data/qualifiers/Hybernate.class
+com/albin/data/HybernateStorage.class
+com/albin/data/IStore.class
+com/albin/model/Movie.class
+com/albin/util/Resources.class
+com/albin/service/HibernateRegistrationService.class
+com/albin/rest/MovieResourceRESTService.class
+com/albin/data/qualifiers/Json.class
+com/albin/rest/JaxRsActivator.class
