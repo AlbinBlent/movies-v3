@@ -1,1 +1,1 @@
-insert into Movie (id, name) values (0, 'Film från import.sql')
+insert into Movie (id, name, overview, poster_path, popularity) values (0, 'Film från import.sql', 'overview', 'poster_path', 4.4)

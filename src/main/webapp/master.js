@@ -56,6 +56,13 @@ var MoviesController = (function () {
                 self.moviesService.createMovie(JSON.stringify({ name: movie.value }));
             }, false);
         }
+        var fetchMoviesFromExternalApiButton = document.getElementById('fetchMovieFromExternalApiButton');
+        if (fetchMoviesFromExternalApiButton) {
+            fetchMoviesFromExternalApiButton.addEventListener('click', function (event) {
+                self.moviesService.fetchMovies();
+            }, false);
+            console.log("fetch button registerd");
+        }
     };
     MoviesController.prototype.onReceivedMovies = function (data) {
         var movieHolder = document.getElementById('movieHolder');
@@ -85,6 +92,9 @@ var MoviesService = (function () {
     };
     MoviesService.prototype.createMovie = function (movie) {
         return this.httpService.post(this.baseUrl, movie);
+    };
+    MoviesService.prototype.fetchMovies = function () {
+        return this.httpService.put(this.baseUrl);
     };
     return MoviesService;
 })();

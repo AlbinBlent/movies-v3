@@ -1,5 +1,6 @@
 package com.albin.rest;
 
+import com.albin.apiClient.JaxRSClient;
 import com.albin.data.IStore;
 import com.albin.data.qualifiers.Hybernate;
 import com.albin.data.qualifiers.Json;
@@ -44,6 +45,24 @@ public class MovieResourceRESTService {
             throw new WebApplicationException(Response.Status.NOT_FOUND);
         }
         return movie;
+    }
+
+    @PUT
+    public void fetchMoviesFromExternalApi(){
+        System.out.println("put");
+        JaxRSClient client = new JaxRSClient();
+        String jsonResponse = client.getRequest();
+        Map<Long, Movie> movieMap = client.parseJson(jsonResponse);
+
+        for (Map.Entry<Long, Movie>  movie : movieMap.entrySet()) {
+            try {
+                validateMovie(movie.getValue());
+                storage.register(movie.getValue());
+                System.out.println(movie.getValue().getName() + " stored");
+            } catch (Exception e){
+
+            }
+        }
     }
 
     @POST

@@ -6,5 +6,6 @@
 /Users/albinblent/dev/FFCG.G4/movies-v3/src/main/java/com/albin/data/IStore.java
 /Users/albinblent/dev/FFCG.G4/movies-v3/src/main/java/com/albin/service/HibernateRegistrationService.java
 /Users/albinblent/dev/FFCG.G4/movies-v3/src/main/java/com/albin/rest/MovieResourceRESTService.java
+/Users/albinblent/dev/FFCG.G4/movies-v3/src/main/java/com/albin/apiClient/JaxRSClient.java
 /Users/albinblent/dev/FFCG.G4/movies-v3/src/main/java/com/albin/data/JsonStorage.java
 /Users/albinblent/dev/FFCG.G4/movies-v3/src/main/java/com/albin/data/HybernateStorage.java

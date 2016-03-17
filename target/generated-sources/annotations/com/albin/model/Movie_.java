@@ -8,8 +8,11 @@ import javax.persistence.metamodel.StaticMetamodel;
 @StaticMetamodel(Movie.class)
 public abstract class Movie_ {
 
+	public static volatile SingularAttribute<Movie, String> overview;
+	public static volatile SingularAttribute<Movie, Double> popularity;
 	public static volatile SingularAttribute<Movie, String> name;
 	public static volatile SingularAttribute<Movie, Long> id;
+	public static volatile SingularAttribute<Movie, String> poster_path;
 
 }
 

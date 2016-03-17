@@ -62,8 +62,15 @@ class MoviesController {
             postMoviesButton.addEventListener('click', event => {
                 var movie = document.getElementById('postMoviesInput');
                 self.moviesService.createMovie(JSON.stringify({ name: movie.value}));
-                self.moviesService.getMovies().then(self.onReceivedMovies);
             }, false);
+        }
+
+        const fetchMoviesFromExternalApiButton = document.getElementById('fetchMovieFromExternalApiButton');
+        if (fetchMoviesFromExternalApiButton){
+            fetchMoviesFromExternalApiButton.addEventListener('click', event => {
+                self.moviesService.fetchMovies();
+            }, false);
+            console.log("fetch button registerd");
         }
     }
 
@@ -103,6 +110,10 @@ class MoviesService {
 
     createMovie(movie){
         return this.httpService.post(this.baseUrl, movie);
+    }
+
+    fetchMovies(){
+        return this.httpService.put(this.baseUrl);
     }
 }
 

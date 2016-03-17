@@ -1,6 +1,7 @@
 com/albin/model/Movie_.class
 com/albin/data/JsonStorage.class
 com/albin/data/qualifiers/Hybernate.class
+com/albin/apiClient/JaxRSClient.class
 com/albin/data/HybernateStorage.class
 com/albin/data/IStore.class
 com/albin/model/Movie.class
